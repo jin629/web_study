@@ -1,8 +1,8 @@
-#Frist-lesson
+# Frist-lesson
 
-###一. Inversion of Control (控制反转)
+### 一. Inversion of Control (控制反转)
 -----
-####1.什么是控制反转
+#### 1.什么是控制反转
 - 摆脱过度依赖产生的缺点
 - 不再使用 `new` 创建一个新的对象
 	- 因为这种方法提高了耦合性 (coupling)
@@ -22,9 +22,9 @@ context.containsBeans(String beanName);		//renturn true or false, 判断bean是�
 context.getBean(String beanName);		//return object, 获取一个bean到的值
 ```
 
-###二. Dependency Injection （依赖注入）
+### 二. Dependency Injection （依赖注入）
 ----
-####1.什么是dependecy
+#### 1.什么是dependecy
 - 如果当创建 A类时，必须同时创建B。我们可以说A类依赖B类
 ```java
 public class Company() {
@@ -41,12 +41,12 @@ public class Company() {
 	- 在哪创建
 - 因为Spring boot 会自导倒入
 
-###三. Anotation
+### 三. Anotation
 ####1. `@Bean`
 - 必须使用于 `@Configuration`下
 - 可通过 `@Bean ("manager")` 手动设置名字
 
-####2. `@Autowired`
+#### 2. `@Autowired`
 - 通过自动绕入/输入， 实现依赖注入
 - 可使用于三种情况下
 	- in Property
@@ -76,14 +76,14 @@ public class A{
 }
 ```
 	
-####3. `@Value`
+#### 3. `@Value`
 - 手动设置属性值
 ```java
  @Value("Google")
     private String companyName;	 //in this case, companyName =  "Google"
 ```
 
-####4. `@Qualifier("BeanName")`
+#### 4. `@Qualifier("BeanName")`
 - 当拥有多个bean时，可手动注入bean
 - 和 `@Autowired` 配套使用
 ```java
@@ -93,13 +93,13 @@ public class A{
     }
 ```
 
-####5. `@Component`
+#### 5. `@Component`
 - 和`@Bean`一样
 - 不过必须用于类里
 - 可通过 `@Component ("person")` 手动设置名字
 - 带有`@Component`的类会自动创建并加入到spring容器中
 
-####6. `@Configuration`
+#### 6. `@Configuration`
 ```java
 @Configuration
 public class DemonConfig {
