@@ -57,8 +57,8 @@ public class A{
 }
 ```
 
-	- in Setter
-	```java
+	- in Setter	
+```java
 public class A{
 	@Autowried
 		public setB (B b){
@@ -68,7 +68,7 @@ public class A{
 ```
 
 	- in Constructor
-	```java
+```java
 public class A{
 	@Autowried
 	Public A(B b){
