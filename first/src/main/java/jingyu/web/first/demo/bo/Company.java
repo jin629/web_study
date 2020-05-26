@@ -1,11 +1,19 @@
 package jingyu.web.first.demo.bo;
 
-public class Company {
-    private  String name;
-    private  Person manager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-    public Company(Person manager){
-        this.name="google";
+@Component("Company")
+public class Company {
+    private Person manager;
+
+    @Value("Google")
+    private String name;
+
+    @Autowired //自动去spring容器里找到相匹配的的bean
+    public Company(@Qualifier("manager") Person manager){
         this.manager = manager;
     }
 
