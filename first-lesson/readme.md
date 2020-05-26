@@ -56,6 +56,7 @@ public class A{
 		private B b;
 }
 ```
+
 	- in Setter
 	```java
 public class A{
@@ -65,7 +66,7 @@ public class A{
 		}
 }
 ```
-	
+
 	- in Constructor
 	```java
 public class A{
