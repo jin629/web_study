@@ -9,12 +9,12 @@
 	- 当更改一个类时，依赖于此类的类不再需要修改
 	- 把控制权交给spring容器
 	
-####2.Bean
+#### 2.Bean
 - 一个类
 - 被spring容器所控制
 - 当需使用相对应的bean时，spring会自动查找到
 
-####3.Application Context
+#### 3.Application Context
 - 使用于 /DemoApplication.java 里
 ```java
 private static ApplicationContext context;
@@ -35,7 +35,7 @@ public class Company() {
 }
 ```
 
-####2.什么是dependency injection
+#### 2.什么是dependency injection
 - 使用依赖注入后，我们将不再关心 `person` 
 	- 何时创建
 	- 在哪创建
